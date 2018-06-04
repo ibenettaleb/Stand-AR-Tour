@@ -16,7 +16,7 @@ public class SampleButton : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		Debug.Log("Hello From GitHub");
 	}
 
 	public void Setup(Service currentService, ServiceScrollList currentScrollList) {
