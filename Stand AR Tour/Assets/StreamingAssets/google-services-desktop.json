@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "35569870616",
+    "firebase_url": "https://um6p-tour.firebaseio.com",
+    "project_id": "um6p-tour",
+    "storage_bucket": "um6p-tour.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:35569870616:android:42db68694a1c4749",
+        "android_client_info": {
+          "package_name": "com.um6p.um6ptour"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "35569870616-cckg7pg4elt8r6lg570vqhrcv857ksl6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqq9t2hjQm9ZmgazmsNEwwxRL_8_mWXa4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources tools:keep="@string/firebase_database_url,@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id,@string/default_web_client_id" xmlns:tools="http://schemas.android.com/tools">
+  <string name="firebase_database_url" translatable="false">https://um6p-tour.firebaseio.com</string>
+  <string name="gcm_defaultSenderId" translatable="false">35569870616</string>
+  <string name="google_storage_bucket" translatable="false">um6p-tour.appspot.com</string>
+  <string name="project_id" translatable="false">um6p-tour</string>
+  <string name="google_api_key" translatable="false">AIzaSyBqq9t2hjQm9ZmgazmsNEwwxRL_8_mWXa4</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBqq9t2hjQm9ZmgazmsNEwwxRL_8_mWXa4</string>
+  <string name="google_app_id" translatable="false">1:35569870616:android:42db68694a1c4749</string>
+  <string name="default_web_client_id" translatable="false">35569870616-cckg7pg4elt8r6lg570vqhrcv857ksl6.apps.googleusercontent.com</string>
+</resources>

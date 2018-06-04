@@ -1,0 +1,14 @@
+{
+    "users" : {
+        "ABENETTALEB" : {
+            "firstname" : "Abdeljalil",
+            "lastname" : "Benettaleb",
+            "email" : "abdeljalil.benettaleb@um6p.ma"
+        },
+        "YBELAFKIH" : {
+            "firstname" : "Youssef",
+            "lastname" : "Belafkih",
+            "email" : "youssef.belafkih@um6p.ma"
+        }
+    }
+}

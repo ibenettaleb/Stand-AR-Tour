@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="chemicalplanpilot" size="50.000000 28.098959" />
+    <ImageTarget name="Optimized-shutterstock_711980332-1" size="210.000000 140.000000" />
+    <ImageTarget name="Library" size="210.000000 139.964996" />
+    <ImageTarget name="ABS-2" size="210.000000 139.965820" />
+  </Tracking>
+</QCARConfig>
