@@ -8,17 +8,12 @@ using System.Net;
 
 public class WorldSpaceVideo : MonoBehaviour {
 
-	public Material playButtonMaterial;
-	public Material pauseButtonMaterial;
+	public Sprite playButton;
+	public Sprite pauseButton;
 	public Renderer playButtonRenderer;
-	public VideoClip[] videoClips;
 
 	public TextMeshProUGUI currentMinutes;
 	public TextMeshProUGUI currentSeconds;
-	public TextMeshProUGUI totalMinutes;
-	public TextMeshProUGUI totalSeconds;
-
-	public PlayHeadMover playHeadMover;
 	
 
 	private VideoPlayer videoPlayer;
@@ -34,25 +29,23 @@ public class WorldSpaceVideo : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		videoPlayer.targetTexture.Release();
-		// videoPlayer.clip = videoClips[0];
 		videoPlayer.source = VideoSource.VideoClip;
 		videoPlayer.source = VideoSource.Url;
 		videoPlayer.url = "http://10.24.28.35:3000/1.MP4";
 
         //Set video To Play then prepare Audio to prevent Buffering
-        // videoPlayer.clip = videoToPlay;
         videoPlayer.Prepare();
 
         //Play Video
         videoPlayer.Play();
-		playButtonRenderer.material = pauseButtonMaterial;
+		// playButtonRenderer.material = pauseButtonMaterial;
+		playButton = pauseButton;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (videoPlayer.isPlaying) {
 			SetCurrentTimeUI();
-			// playHeadMover.MovePlayhead (CalculatePlayedFraction ());
 		}
 	}
 
@@ -87,24 +80,20 @@ public class WorldSpaceVideo : MonoBehaviour {
 
 		if (title == "") {
 			videoPlayer.url = "http://10.24.28.35:3000/" + videoClipIndex + ".MP4";
-			//Set video To Play then prepare Audio to prevent Buffering
-			// videoPlayer.clip = videoToPlay;
 			videoPlayer.Prepare();
 
 			//Play Video
 			videoPlayer.Play();
-			playButtonRenderer.material = pauseButtonMaterial;
+			// playButtonRenderer.material = pauseButtonMaterial;
 
 		} else {
 			videoClipIndex = 1;
 			videoPlayer.url = "http://10.24.28.35:3000/" + videoClipIndex + ".MP4";
-			//Set video To Play then prepare Audio to prevent Buffering
-			// videoPlayer.clip = videoToPlay;
 			videoPlayer.Prepare();
 
 			//Play Video
 			videoPlayer.Play();
-			playButtonRenderer.material = pauseButtonMaterial;
+			// playButtonRenderer.material = pauseButtonMaterial;
 		} 
 	}
 
@@ -112,11 +101,10 @@ public class WorldSpaceVideo : MonoBehaviour {
 		Debug.Log("Start Video");
 		if (videoPlayer.isPlaying) {
 			videoPlayer.Pause();
-			playButtonRenderer.material = playButtonMaterial;
+			// playButtonRenderer.material = playButtonMaterial;
 		} else {
 			videoPlayer.Play();
-			// SetTotalTimeUI();
-			playButtonRenderer.material = pauseButtonMaterial;
+			// playButtonRenderer.material = pauseButtonMaterial;
 		}
 	}
 
@@ -127,18 +115,5 @@ public class WorldSpaceVideo : MonoBehaviour {
 		currentMinutes.text = minutes;
 		currentSeconds.text = seconds;
 	}
-
-	/* void SetTotalTimeUI() {
-		string minutes = Mathf.Floor ((int)videoPlayer.clip.length / 60).ToString ("00");
-		string seconds = ((int)videoPlayer.clip.length % 60).ToString("00");
-
-		totalMinutes.text = minutes;
-		totalSeconds.text = seconds;
-	}
-
-	double CalculatePlayedFraction() {
-		double fraction = (double) videoPlayer.frame / (double) videoPlayer.clip.frameCount;
-		return fraction;
-	}*/
 
 }
