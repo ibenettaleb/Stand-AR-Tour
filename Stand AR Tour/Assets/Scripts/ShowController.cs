@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EnbledAndDisablingGameObject : MonoBehaviour {
+public class ShowController : MonoBehaviour {
    
     void Start()
     {
-        gameObject.SetActive(false);
+        gameObject.SetActive(true);
     }
     void Update()
     {
@@ -20,9 +20,6 @@ public class EnbledAndDisablingGameObject : MonoBehaviour {
 
     public void Close() {
         gameObject.SetActive(false);
-    }
-
-    public void After() {
         Invoke("Start", 5.0f);
     }
 }
