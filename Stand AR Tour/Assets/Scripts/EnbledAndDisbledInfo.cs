@@ -6,6 +6,10 @@ using UnityEngine.UI;
 
 public class EnbledAndDisbledInfo : MonoBehaviour {
 
+    /*
+        Abdeljalil BENETTALEb
+     */
+
     public Animation anim;
 
 	void Start()
