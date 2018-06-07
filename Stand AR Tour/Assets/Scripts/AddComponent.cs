@@ -16,11 +16,12 @@ public class AddComponent : MonoBehaviour {
 		
 	}
 
+	public void CreateScale() {
+		LeanScale ls = gameObject.AddComponent<LeanScale>() as LeanScale;
+	}
+
 	public void DeleteScale() {
 		Destroy(GetComponent("LeanScale"));
 	}
 
-	public void CreateScale() {
-		LeanScale ls = gameObject.AddComponent<LeanScale>() as LeanScale;
-	}
 }
