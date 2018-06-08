@@ -78,5 +78,5 @@ public class UseWithCodeSceneManager : MonoBehaviour {
         Debug.LogWarning("UniWebView only works on iOS/Android/WP8. Please switch to these platforms in Build Settings.");
     }
 #endif
-
+    
 }
