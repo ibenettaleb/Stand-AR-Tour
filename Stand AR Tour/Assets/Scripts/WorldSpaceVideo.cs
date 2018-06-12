@@ -21,13 +21,17 @@ public class WorldSpaceVideo : MonoBehaviour {
 	private VideoSource videoSource;
 	private float videoDuration;
 
+	public LoadingCircle loadingCircle;
+
 	void Awake()
 	{
 		videoPlayer = GetComponent<VideoPlayer> ();
+		loadingCircle = FindObjectOfType(typeof(LoadingCircle)) as LoadingCircle;
 	}
 
 	// Use this for initialization
 	void Start () {
+		loadingCircle.SetActiveTrue();
 		videoPlayer.targetTexture.Release();
 		videoPlayer.source = VideoSource.VideoClip;
 		videoPlayer.source = VideoSource.Url;
@@ -38,6 +42,8 @@ public class WorldSpaceVideo : MonoBehaviour {
 
         //Play Video
         videoPlayer.Play();
+		loadingCircle.SetActiveFalse();
+		
 		// playButtonRenderer.material = pauseButtonMaterial;
 		playButton = pauseButton;
 	}
@@ -50,12 +56,13 @@ public class WorldSpaceVideo : MonoBehaviour {
 	}
 
 	public int videoClipIndex = 1;
-	public void SetNextClip() {
 
+    public void SetNextClip() {
+		loadingCircle.SetActiveTrue();
 		videoClipIndex = videoClipIndex + 1;
 		Debug.Log(videoClipIndex);
 		StartCoroutine(Request("http://10.24.28.35:3000/" + videoClipIndex + ".MP4"));
-
+		loadingCircle.SetActiveFalse();
 	}
 
 	IEnumerator Request(string url) {
